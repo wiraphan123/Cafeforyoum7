@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import backgroundImage from '../assets/jessica-arends-8saVYOMHFzU-unsplash.jpg'
 import BackgroundBlock from '../components/BackgroundBlock'
+import { Title, Subtitle } from '../components/Typography'
 
 const Button = styled.button`
 padding: 1rem .5rem;
@@ -31,10 +32,12 @@ function Home() {
     <>
       <BackgroundBlock src={backgroundImage}>
       <Title> Cafe For You </Title>
-        <Subtitle> We hope you will find a good coffee shop in our website </Subtitle>
-          <Button as='a'href='#content'>Review </Button>
+          <Subtitle> We hope you will find a good coffee shop in our website </Subtitle>
+          <Button as='a' href='#content'>Look around </Button>
         </BackgroundBlock>
         <Content id='content'>
+        
+        
         </Content>
       </>
   )
