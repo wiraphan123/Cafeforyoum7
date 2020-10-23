@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from "../components/Review/Navbar"
+import Navbar from "../page/Review"
 
 function Review() {
     return (     
