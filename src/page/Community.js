@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from "../components/Community/Navbar"
+import Navbar from "../page/Community"
 
 function Community() {
     return (     
