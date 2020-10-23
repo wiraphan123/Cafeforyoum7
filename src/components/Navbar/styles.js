@@ -1,37 +1,23 @@
-import React from 'react'
-import { MemoryRouter } from 'react-router-dom'
-import { render } from '@testing-library/react'
-import Navbar from '.'
-describe('NavBar', () => {
-    test('should contains ', () => {
-        const { getByText } = render(
-        <MemoryRouter>
-        <NavBar />
-        </MemoryRouter>
-        )
-        expect(getByTest(/logo/ig)).toBeInTheDocument()
-    })
-    test('should have link navigate to home, about, contact and story', () => {
-        const { getByText } = render(
-            <MemoryRouter>
-            <NavBar />
-            </MemoryRouter>
-            )
-            expect(getByText(/home/gi)).toBeInTheDocument()
-            expect(getByText(/home/gi).closest('a')).toHaveAttribute('href', '/')
-            expect(getByText(/about/gi)).toBeInTheDocument()
-            expect(getByText(/about/gi).closest('a')).toHaveAttribute('href', '/about')
-            expect(getByText(/contact/gi)).toBeInTheDocument()
-            expect(getByText(/contact/gi).closest('a')).toHaveAttribute('href', '/contact')
-            expect(getByText(/story/gi)).toBeInTheDocument()
-            expect(getByText(/story/gi).closest('a')).toHaveAttribute('href', '/story')
-    })
-    test('s', () => {
-        const { container } = render(
-            <MemoryRouter>
-                <Navbar/>
-            </MemoryRouter>
-        )
-        expect(container).toMatchInlineSnapshot()
-    })
-})
+import styled from 'styled-components'
+
+export const Container = styled.div`
+  width: 100vw;
+  z-index: 9001;
+  background-color: ${prprs => (prprs.isScroll ? '#fff' : 'transparent')};
+  position: ${props => (props.isScroll ? 'fixed' : 'static')};
+`
+export const Wrapper = styled.div`
+  display: flex;
+  flex: 1;
+  padding: 2rem;
+`
+export const Logo = styled.div``
+
+export const ActionContainer = styled.ul`
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+`
+export const Action = styled.li`
+  padding: 0 1rem;
+`
