@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import backgroundImage from '../assets/jessica-arends-8saVYOMHFzU-unsplash.jpg'
+import backgroundImage from '../assets/home.jpg'
 import BackgroundBlock from '../components/BackgroundBlock'
 import { Title, Subtitle } from '../components/Typography'
 
